@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="rs">
+	<head>
+		<meta charset="UTF-8">
+		<title>Quotation generator</title>
+		<link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+		<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+		<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css'>
+		<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.12.0/bootstrap-social.min.css'>
+		<link href="css/style.css" rel="stylesheet">
+
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="col-md-4">
+								<div class="form-group">
+									<select class="form-control" id="category">
+										<option selected>Kategorija</option>
+										<option id="istorija" name="type" value="istorija">Citati iz istorije</option>
+										<option id="lat" name="type" value="lat">Latinski citati</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="col-md-4">
+								<div class="form-group">
+									<select class="form-control" id="count">
+										<option selected>Broj citata:</option>
+										<option id="one" name="number" value="1">1</option>
+										<option id="two" name="number" value="2">2</option>
+										<option id="three" name="number" value="3">3</option>
+										<option id="four" name="number" value="4">4</option>
+										<option id="five" name="number" value="5">5</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="col-md-4">
+								<button onclick="newQuote(); confirm();" class="btn btn-colour01 btn-block" id="generate">Generisi</button>
+							</div>
+
+							<div class="col-lg-12" id="hidden">
+								<div id="quotes">
+									<div id="quote1"></div>
+									<div id="quote2"></div>
+									<div id="quote3"></div>
+									<div id="quote4"></div>
+									<div id="quote5"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="col-lg-6 mb-4">
+								<button onclick="refresh()" class="btn btn-colour02 btn-block">Obnovi stranicu</button>
+							</div>
+							
+							<div class="col-lg-6" style="margin-bottom: 10px;">
+								<button onclick="quit()" class="btn btn-danger btn-block">Izadji</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</body>
+
+	<script src="scripts.js"></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js'></script>
+	<script>
+		$(document).ready(function(){
+			$("#hidden").hide();
+
+			$("#generate").click(function(){
+				$("#hidden").show("slow");
+			});
+		});
+	</script>
+</html>

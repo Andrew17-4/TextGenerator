@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;;
+}
+#hidden {
+  margin-top: 20px;
+}
+body {
+  padding-top: 50px;
+  height:100vh;
+  background: -webkit-gradient(linear, left bottom, right top, from(#08aeea), to(#b721ff));
+    background: -webkit-linear-gradient(bottom left, #08aeea 0%, #b721ff 100%);
+    background: -moz-linear-gradient(bottom left, #08aeea 0%, #b721ff 100%);
+    background: -o-linear-gradient(bottom left, #08aeea 0%, #b721ff 100%);
+    background: linear-gradient(to top right, #08aeea 0%, #b721ff 100%);
+
+}
+.btn-colour01{
+	background-color:#08aeea;
+	color:white;
+}
+.btn-colour02{
+	background-color:#b721ff;
+	color:white;
+}
+.container{
+	background-color:white;
+	border-radius:15px;
+}
+.panel-default {
+    border: 0; 
+}
